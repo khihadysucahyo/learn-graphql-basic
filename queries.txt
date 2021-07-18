@@ -1,0 +1,59 @@
+mutation {
+  addUser(name: "barbadocks") {
+    id
+    name
+    forums{
+      id
+      title
+      desc
+    }
+  }
+  
+  addForum(title: "cobaTitlse", desc: "Desc test", userID: 2) {
+    id
+    title
+    desc
+    user{
+      id
+    	name
+    }
+  }
+}
+# {
+#   forums{
+#     id
+#     title
+#     desc
+#     user{
+#       id
+#       name
+#     }
+#   }
+#   forum(id: 1){
+#     id
+#     title
+#     desc
+#     user{
+#       id
+#       name
+#     }
+#   }
+#   users {
+#     id
+#     name
+#     forums{
+#       id
+#       title
+#       desc
+#     }
+#   }
+#   user(id: 2) {
+#     id
+#     name
+#     forums{
+#       id
+#       title
+#       desc
+#     }
+#   }
+# }
